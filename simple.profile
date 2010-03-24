@@ -23,11 +23,15 @@ function simple_profile_details() {
  *   An array of modules to enable.
  */
 function simple_profile_modules() {
+  return array(
   // Core
-  return array('color', 'comment', 'help', 'menu', 'taxonomy', 'dblog',
+  'block', 'comment', 'dblog', 'filter', 'help', 'menu', 'node', 'path',
+  'system', 'taxonomy',
   // Contrib
   'admin', 'content', 'content_permissions', 'ctools', 'diff', 'features',
   'pathauto', 'strongarm', 'token', 'views', 'views_ui',
+  // Features
+  'simple_blog',
   );
 }
 
@@ -115,28 +119,20 @@ function simple_profile_tasks(&$task, $url) {
   variable_set('theme_default', 'singular');
   variable_set('admin_theme', 'rubik');
 
-
-  // Insert default user-defined node types into the database. For a complete
-  // list of available node type attributes, refer to the node type API
-  // documentation at: http://api.drupal.org/api/HEAD/function/hook_node_info.
-  $types = array(
-    array(
-      'type' => 'blog',
-      'name' => st('Blog post'),
-      'module' => 'node',
-      'description' => st("A <em>blog post</em>, is ideal for creating and displaying content that informs or engages website visitors. Press releases, site announcements, and informal blog-like entries may all be created with a <em>story</em> entry. By default, a <em>story</em> entry is automatically featured on the site's initial home page, and provides the ability to post comments."),
-      'custom' => TRUE,
-      'modified' => TRUE,
-      'locked' => FALSE,
-      'help' => '',
-      'min_word_count' => '',
-    ),
+  // Create freetagging vocab
+  $vocab = array(
+    'name' => 'Keywords',
+    'multiple' => 0,
+    'required' => 0,
+    'hierarchy' => 0,
+    'relations' => 0,
+    'module' => 'taxonomy',
+    'weight' => 0,
+    'nodes' => array('blog' => 1),
+    'tags' => TRUE,
+    'help' => t('Enter tags related to your post.'),
   );
-
-  foreach ($types as $type) {
-    $type = (object) _node_type_set_defaults($type);
-    node_type_save($type);
-  }
+  taxonomy_save_vocabulary($vocab);
 
   // Generate blog posts, comments.
   node_types_rebuild();
@@ -151,7 +147,7 @@ function simple_profile_tasks(&$task, $url) {
       'name' => devel_generate_word(mt_rand(6, 12)),
       'pass' => user_password(),
       'mail' => devel_generate_word(mt_rand(6, 12)) . '@' . $url['host'],
-      'roles' => array(3 => 3, 4 => 4),
+      'roles' => array(2 => 2, 2 => 2),
     );
     user_save(NULL, $account);
   }
