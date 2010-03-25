@@ -34,7 +34,9 @@ projects[devel][version] = "1"
 
 ; Features
 projects[simple_blog][subdir] = "features"
-projects[simple_blog][location] = "http://haikungfu.org/fserver"
+\projects[simple_blog][type] = "module"
+projects[simple_blog][download][type] = "git"
+projects[simple_blog][download][url] = "git://github.com/sprice/simple_blog.git"
 
 ; Themes
 projects[rubik][location] = http://code.developmentseed.org/fserver
