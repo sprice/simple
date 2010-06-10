@@ -19,6 +19,9 @@ projects[diff][version] = "2.1-alpha3"
 projects[features][subdir] = "contrib"
 projects[features][version] = "1.0-beta7"
 
+projects[jquery_ui][subdir] = "contrib"
+projects[jquery_ui][version] = "1.3"
+
 projects[pathauto][subdir] = "contrib"
 projects[pathauto][version] = "1.3"
 
