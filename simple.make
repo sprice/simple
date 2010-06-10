@@ -47,12 +47,6 @@ projects[schema][version] = "1.7"
 projects[simpletest][subdir] = "development"
 projects[simpletest][version] = "2.8"
 
-; Features
-projects[simple_blog][subdir] = "features"
-projects[simple_blog][type] = "module"
-projects[simple_blog][download][type] = "git"
-projects[simple_blog][download][url] = "git://github.com/sprice/simple_blog.git"
-
 ; Themes
 projects[rubik][location] = http://code.developmentseed.org/fserver
 projects[singular][location] = http://code.developmentseed.org/fserver
