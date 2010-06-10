@@ -8,7 +8,7 @@ projects[cck][subdir] = "contrib"
 projects[cck][version] = "2.6"
 
 projects[context][subdir] = "contrib"
-projects[context][version] = "6.x-3.0-beta5"
+projects[context][version] = "3.0-beta5"
 
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.6"
