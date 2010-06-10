@@ -133,42 +133,6 @@ function simple_profile_tasks(&$task, $url) {
     'help' => t('Enter tags related to your post.'),
   );
   taxonomy_save_vocabulary($vocab);
-
-  // Generate blog posts, comments.
-  node_types_rebuild();
-  module_load_include('inc', 'devel_generate', 'devel_generate');
-
-  // Rebuild access lists.
-  node_access_rebuild();
-  
-  // Create users
-  for ($i = 0; $i < 2; $i++) {
-    $account = array(
-      'name' => devel_generate_word(mt_rand(6, 12)),
-      'pass' => user_password(),
-      'mail' => devel_generate_word(mt_rand(6, 12)) . '@' . $url['host'],
-      'roles' => array(2 => 2, 2 => 2),
-    );
-    user_save(NULL, $account);
-  }
-
-  // Create blog posts.
-  $generate = array();
-  $generate['kill_content'] = FALSE;
-  $generate['time_range'] = 604800;
-  $generate['max_comments'] = 0;
-  $generate['title_length'] = 8;
-  $generate['add_upload'] = FALSE;
-  $generate['add_terms'] = FALSE;
-  $generate['add_alias'] = FALSE;
-  $generate['add_statistics'] = FALSE;
-
-  $blog = array('values' => $generate);
-  $blog['values']['node_types'] = array('blog' => TRUE);
-  $blog['values']['num_nodes'] = 30;
-  $blog['values']['max_comments'] = 10;
-  devel_generate_content($blog);
-
 }
 
 /**
