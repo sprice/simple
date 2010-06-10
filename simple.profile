@@ -32,6 +32,8 @@ function simple_profile_modules() {
   'pathauto', 'strongarm', 'token', 'views', 'views_ui',
   // Features
   'simple_blog',
+  // Development
+  'coder', 'devel', 'schema', 'simpletest',
   );
 }
 
