@@ -28,14 +28,12 @@ function simple_profile_modules() {
   'block', 'comment', 'dblog', 'filter', 'help', 'menu', 'node', 'path',
   'system', 'taxonomy',
   // Contrib
-  'admin', 'content', 'content_permissions', 'ctools', 'diff', 'features',
-  'pathauto', 'strongarm', 'token', 'views', 'views_ui',
+  'admin', 'content', 'context', 'context_ui', 'content_permissions', 'ctools',
+  'diff', 'features', 'pathauto', 'strongarm', 'token', 'views', 'views_ui',
   // Development
-  'coder', 'devel', 'schema', 'simpletest',
+  'coder', 'devel', 'schema',
   );
 }
-
-
 
 /**
  * Return a list of tasks that this profile supports.
@@ -103,12 +101,6 @@ function simple_profile_task_list() {
  */
 function simple_profile_tasks(&$task, $url) {
 
-  // Update the menu router information.
-  menu_rebuild();
-
-  // Rebuild the schema cache.
-  drupal_get_schema(NULL, TRUE);
-
   // Clear caches.
   drupal_flush_all_caches();
 
@@ -128,11 +120,56 @@ function simple_profile_tasks(&$task, $url) {
     'relations' => 0,
     'module' => 'taxonomy',
     'weight' => 0,
-    'nodes' => array('blog' => 1),
+    'nodes' => array('page' => 1, 'story' => 1),
     'tags' => TRUE,
     'help' => t('Enter tags related to your post.'),
   );
   taxonomy_save_vocabulary($vocab);
+
+  // Insert default user-defined node types into the database. For a complete
+  // list of available node type attributes, refer to the node type API
+  // documentation at: http://api.drupal.org/api/HEAD/function/hook_node_info.
+  $types = array(
+    array(
+      'type' => 'page',
+      'name' => st('Page'),
+      'module' => 'node',
+      'description' => st("A <em>page</em>, similar in form to a <em>story</em>, is a simple method for creating and displaying information that rarely changes, such as an \"About us\" section of a website. By default, a <em>page</em> entry does not allow visitor comments and is not featured on the site's initial home page."),
+      'custom' => TRUE,
+      'modified' => TRUE,
+      'locked' => FALSE,
+      'help' => '',
+      'min_word_count' => '',
+    ),
+    array(
+      'type' => 'story',
+      'name' => st('Story'),
+      'module' => 'node',
+      'description' => st("A <em>story</em>, similar in form to a <em>page</em>, is ideal for creating and displaying content that informs or engages website visitors. Press releases, site announcements, and informal blog-like entries may all be created with a <em>story</em> entry. By default, a <em>story</em> entry is automatically featured on the site's initial home page, and provides the ability to post comments."),
+      'custom' => TRUE,
+      'modified' => TRUE,
+      'locked' => FALSE,
+      'help' => '',
+      'min_word_count' => '',
+    ),
+  );
+
+  foreach ($types as $type) {
+    $type = (object) _node_type_set_defaults($type);
+    node_type_save($type);
+  }
+
+  // Default page to not be promoted and have comments disabled.
+  variable_set('node_options_page', array('status'));
+  variable_set('comment_page', COMMENT_NODE_DISABLED);
+
+  // Don't display date and author information for page nodes by default.
+  $theme_settings = variable_get('theme_settings', array());
+  $theme_settings['toggle_node_info_page'] = FALSE;
+  variable_set('theme_settings', $theme_settings);
+
+  // Update the menu router information.
+  menu_rebuild();
 }
 
 /**
