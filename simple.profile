@@ -28,8 +28,9 @@ function simple_profile_modules() {
   'block', 'comment', 'dblog', 'filter', 'help', 'menu', 'node', 'path',
   'system', 'taxonomy',
   // Contrib
-  'admin', 'content', 'context', 'context_ui', 'content_permissions', 'ctools',
-  'diff', 'features', 'pathauto', 'strongarm', 'token', 'views', 'views_ui',
+  'admin', 'content', 'context', 'context_layouts', 'context_ui',
+  'content_permissions', 'css_injector', 'ctools', 'diff', 'features',
+  'pathauto', 'strongarm', 'token', 'views', 'views_ui',
   // Development
   'coder', 'devel', 'schema',
   );
