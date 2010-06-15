@@ -30,9 +30,7 @@ function simple_profile_modules() {
   // Contrib
   'admin', 'content', 'context', 'context_layouts', 'context_ui',
   'content_permissions', 'css_injector', 'ctools', 'diff', 'features',
-  'pathauto', 'strongarm', 'token', 'views', 'views_ui',
-  // Development
-  'coder', 'devel', 'schema',
+  'pathauto', 'jquery_ui', 'strongarm', 'token', 'views', 'views_ui',
   );
 }
 
@@ -108,8 +106,8 @@ function simple_profile_tasks(&$task, $url) {
   // Enable default theme
   db_query("UPDATE {blocks} SET status = 0, region = ''");
   db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
-  db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'singular'");
-  variable_set('theme_default', 'singular');
+  db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'cube'");
+  variable_set('theme_default', 'cube');
   variable_set('admin_theme', 'rubik');
 
   // Create freetagging vocab
