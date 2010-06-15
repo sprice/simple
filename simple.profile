@@ -29,7 +29,7 @@ function simple_profile_modules() {
   'system', 'taxonomy',
   // Contrib
   'admin', 'content', 'context', 'context_layouts', 'context_ui',
-  'content_permissions', 'css_injector', 'ctools', 'diff', 'features',
+  'content_permissions', 'ctools', 'diff', 'features',
   'pathauto', 'jquery_ui', 'strongarm', 'token', 'views', 'views_ui',
   );
 }

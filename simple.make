@@ -13,9 +13,6 @@ projects[context][version] = "3.0-beta5"
 projects[ctools][subdir] = "contrib"
 projects[ctools][version] = "1.6"
 
-projects[css_injector][subdir] = "contrib"
-projects[css_injector][version] = "1.4"
-
 projects[diff][subdir] = "contrib"
 projects[diff][version] = "2.1-alpha3"
 
