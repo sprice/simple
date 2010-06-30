@@ -2,10 +2,10 @@ core = 6.x
 
 ; Contrib
 projects[admin][subdir] = "contrib"
-projects[admin][version] = "2.0-beta3"
+projects[admin][version] = "2.0-beta4"
 
 projects[cck][subdir] = "contrib"
-projects[cck][version] = "2.6"
+projects[cck][version] = "2.7"
 
 projects[context][subdir] = "contrib"
 projects[context][version] = "3.0-beta5"
@@ -17,7 +17,7 @@ projects[diff][subdir] = "contrib"
 projects[diff][version] = "2.1-alpha3"
 
 projects[features][subdir] = "contrib"
-projects[features][version] = "1.0-beta7"
+projects[features][version] = "1.0-beta8"
 
 projects[jquery_ui][subdir] = "contrib"
 projects[jquery_ui][version] = "1.3"
@@ -32,7 +32,7 @@ projects[token][subdir] = "contrib"
 projects[token][version] = "1.13"
 
 projects[views][subdir] = "contrib"
-projects[views][version] = "2.10"
+projects[views][version] = "2.11"
 
 ; Development
 projects[coder][subdir] = "development"
