@@ -9,10 +9,3 @@ This will build Drupal with a number of patches required by Build Kit and build 
 ## Thanks
 
 Inspired by [Build Kit](http://drupal.org/project/buildkit)
-
-With thanks to:
-
-* default.profile
-* openatrium.profile
-* spacesdemo.profile
-* buildkit.profile
