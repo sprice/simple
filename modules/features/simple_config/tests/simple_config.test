@@ -1,0 +1,22 @@
+<?php
+
+class SimpleConfigTest extends DrupalWebTestCase {
+  protected $profile = 'testing';
+
+  function getInfo() {
+    return array(
+      'name' => t('Simple: example'),
+      'description' => t('Example test.'),
+      'group' => t('Simple'),
+    );
+  }
+
+  function setUp() {
+    parent::setUp('simple_config');
+  }
+  
+  function test() {
+    $this->drupalGet('node');
+    $this->assertText('Who\'s online');
+  }
+}
