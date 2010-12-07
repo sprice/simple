@@ -26,3 +26,7 @@ dependencies[] = features
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_ui
+
+; Custom
+
+dependencies[] = simple_config
