@@ -16,3 +16,10 @@ projects[admin][patch][] = http://drupal.org/files/issues/admin-hidden-content.p
 
 projects[coder][subdir] = contrib
 projects[coder][version] = 1.0-beta6
+
+; Searchlight
+
+projects[searchlight][type] = module
+projects[searchlight][subdir] = contrib
+projects[searchlight][download][type] = git
+projects[searchlight][download][url] = git://github.com/yhahn/searchlight.git
