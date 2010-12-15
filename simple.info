@@ -16,9 +16,9 @@ dependencies[] = taxonomy
 dependencies[] = admin
 dependencies[] = openid
 dependencies[] = openidadmin
-; Context is causing errors with test.drush.inc
-;dependencies[] = context
-;dependencies[] = context_ui
+dependencies[] = coder
+dependencies[] = context
+dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = devel
 dependencies[] = diff

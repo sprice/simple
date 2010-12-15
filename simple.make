@@ -6,5 +6,9 @@ includes[] = http://drupalcode.org/viewvc/drupal/contributions/profiles/buildkit
 
 ; Overrides for Build Kit
 
-projects[tao][subdir] = "contrib"
-projects[rubik][subdir] = "contrib"
+projects[tao][subdir] = contrib
+projects[rubik][subdir] = contrib
+
+; Development
+
+projects[coder][version] = 1.0-beta6
