@@ -1,3 +1,24 @@
 <?php
 
 include_once('simple_config.features.inc');
+
+/**
+ * Implementation of hook_menu().
+ */
+function simple_config_menu() {
+  $items = array();
+  $items['home'] = array(
+    'page callback' => 'home_page',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Homepage callback.
+ */
+function home_page() {
+  return t('Welcome to Simple.');
+}

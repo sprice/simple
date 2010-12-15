@@ -16,7 +16,7 @@ class SimpleConfigTest extends DrupalWebTestCase {
   }
   
   function test() {
-    $this->drupalGet('node');
-    $this->assertText('Who\'s online');
+    $this->drupalGet('home');
+    $this->assertText('Welcome to Simple.');
   }
 }
