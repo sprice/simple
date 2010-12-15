@@ -21,4 +21,3 @@ projects[drupal][patch][912700] = http://drupal.org/files/issues/update_remove_f
 projects[simple][type] = profile
 projects[simple][download][type] = git
 projects[simple][download][url] = git://github.com/sprice/simple.git
-projects[simple][download][branch] = 7.x
