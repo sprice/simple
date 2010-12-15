@@ -7,7 +7,10 @@ includes[] = http://drupalcode.org/viewvc/drupal/contributions/profiles/buildkit
 ; Overrides for Build Kit
 
 projects[tao][subdir] = contrib
+
 projects[rubik][subdir] = contrib
+
+projects[admin][patch][] = http://drupal.org/files/issues/admin-hidden-content.patch
 
 ; Development
 
