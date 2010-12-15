@@ -11,4 +11,5 @@ projects[rubik][subdir] = contrib
 
 ; Development
 
+projects[coder][subdir] = contrib
 projects[coder][version] = 1.0-beta6
