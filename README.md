@@ -1,13 +1,19 @@
 ## A simple Drupal distibution.
 
-Use the simple_distro.make file to build the Drupal codebase.
+### Build
 
-`drush make simple_distro.make public_html`
+Copy the `simple_distro.make` file to your system and run with `drush make` [1][2]
 
-This will build Drupal with a number of patches required by Build Kit and build the Simple distribution.
+    $ curl -O -k https://github.com/sprice/simple/raw/master/simple_distro.make
+    $ drush make --working-copy simple_distro.make public_html
 
-The included simple_config module is currently nothing more than a placeholder.
+### Notes
 
-## Thanks
+The included `/modules/features/simple_config` module is currently nothing more than a placeholder.
 
-Inspired by [Build Kit](http://drupal.org/project/buildkit)
+### Thanks
+
+Built on top of [Build Kit](http://drupal.org/project/buildkit)
+
+[1] http://drupal.org/project/drush
+[2] http://drupal.org/project/drush_make
