@@ -12,8 +12,6 @@ projects[rubik][subdir] = contrib
 
 projects[admin][patch][] = http://drupal.org/files/issues/admin-hidden-content.patch
 
-projects[views][download][date] = 2010-12-16
-
 ; Development
 
 projects[coder][subdir] = contrib
