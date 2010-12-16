@@ -11,6 +11,8 @@ Copy the `simple_distro.make` file to your system and run with `drush make` [1][
 
 Read the Searchlight [REAMDE](https://github.com/yhahn/searchlight/blob/drupal-7--1/README.markdown) and [INSTALL](https://github.com/yhahn/searchlight/blob/drupal-7--1/INSTALL.markdown) files carefully.
 
+Assumes you are using Sphinx.
+
 The included `simple_search` feature contains some decent defaults to get started with Searchlight.
 
 Update your `settings.php` file to include:
