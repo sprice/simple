@@ -9,7 +9,7 @@ function simple_search_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'site';
+  $context->name = 'search';
   $context->description = '';
   $context->tag = 'simple';
   $context->conditions = array(
@@ -36,7 +36,7 @@ function simple_search_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('simple');
-  $export['site'] = $context;
+  $export['search'] = $context;
 
   return $export;
 }
