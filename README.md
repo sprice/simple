@@ -4,7 +4,7 @@
 
 Copy the `simple_distro.make` file to your system and run with `drush make` [1][2]
 
-    $ curl -O -k https://github.com/sprice/simple/raw/master/simple_distro.make
+    $ curl -O -k https://github.com/sprice/simple/raw/searchlight/simple_distro.make
     $ drush make --working-copy simple_distro.make public_html
 
 ### Searchlight
