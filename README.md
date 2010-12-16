@@ -21,6 +21,8 @@ The path to your `mysql.sock` may be different. If you are running MAMP it is pr
 
 For help installing Sphinx with OSX 10.6 and MAMP 1.9.4 [read this](https://gist.github.com/742897).
 
+Once you've installed the codebase, you can get up and running quickly with some generated content using [this shell script](https://gist.github.com/742908).
+
 ### Thanks
 
 Built on top of [Build Kit](http://drupal.org/project/buildkit)
