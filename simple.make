@@ -23,3 +23,4 @@ projects[searchlight][type] = module
 projects[searchlight][subdir] = contrib
 projects[searchlight][download][type] = git
 projects[searchlight][download][url] = git://github.com/yhahn/searchlight.git
+projects[searchlight][download][branch] = drupal-7--1

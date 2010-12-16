@@ -3,6 +3,7 @@ core = 7.x
 description = A simple install profile, based on Build Kit
 
 ; Core
+dependencies[] = block
 dependencies[] = book
 dependencies[] = contact
 dependencies[] = dblog
@@ -21,6 +22,7 @@ dependencies[] = context
 dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = devel
+dependencies[] = devel_generate
 dependencies[] = diff
 dependencies[] = features
 dependencies[] = strongarm
@@ -30,3 +32,8 @@ dependencies[] = views_ui
 ; Custom
 
 dependencies[] = simple_config
+dependencies[] = simple_search
+
+; Searchlight
+dependencies[] = searchlight
+dependencies[] = searchlight_basic
