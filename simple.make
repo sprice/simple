@@ -7,6 +7,9 @@ includes[] = http://drupalcode.org/viewvc/drupal/contributions/profiles/buildkit
 
 ; Overrides for Build Kit
 
+; Views security release
+projects[views][version] = 2.12
+
 projects[tao][subdir] = contrib
 
 projects[rubik][subdir] = contrib
