@@ -1,0 +1,40 @@
+name = Simple
+core = 6.x
+description = A simple install profile, based on Build Kit.
+theme = rubik
+
+; Core
+dependencies[] = block
+dependencies[] = book
+dependencies[] = comment
+dependencies[] = contact
+dependencies[] = dblog
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = path
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = upload
+dependencies[] = user
+
+; Contrib
+dependencies[] = admin
+dependencies[] = openid
+dependencies[] = openidadmin
+dependencies[] = content
+dependencies[] = optionwidgets
+dependencies[] = text
+dependencies[] = context
+dependencies[] = context_ui
+dependencies[] = ctools
+dependencies[] = date_api
+dependencies[] = date_timezone
+dependencies[] = date
+dependencies[] = date_popup
+dependencies[] = features
+dependencies[] = jquery_ui
+dependencies[] = strongarm
+dependencies[] = views
+dependencies[] = views_ui
