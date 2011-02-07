@@ -6,4 +6,5 @@
 function simple_install() {
   theme_enable(array('rubik'));
   variable_set('theme_default', 'rubik');
+  variable_set('site_frontpage', 'home');
 }
