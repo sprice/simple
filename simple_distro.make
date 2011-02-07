@@ -1,4 +1,4 @@
-; Built using by http://drupal.org/project/buildkit
+; Built using http://drupal.org/project/buildkit
 
 api = 2
 core = 7.x
