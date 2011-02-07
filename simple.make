@@ -10,6 +10,10 @@ projects[tao][subdir] = contrib
 
 projects[rubik][subdir] = contrib
 
+; Notices on admin/index
+; http://drupal.org/node/999582
+projects[rubik][patch][999582] = http://drupal.org/files/issues/999582-1_notices.patch
+
 ; Development
 
 projects[coder][subdir] = contrib
