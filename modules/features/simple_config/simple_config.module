@@ -20,5 +20,5 @@ function simple_config_menu() {
  * Homepage callback.
  */
 function home_page() {
-  return t('Welcome to a testing page.');
+  return t('Welcome to Simple.');
 }
