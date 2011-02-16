@@ -9,7 +9,10 @@ Copy the `simple_distro.make` file to your system and run with `drush make` [1][
 
 ### Notes
 
-The included `/modules/features/simple_config` module is currently nothing more than a placeholder.
+This project contains a distro features module, `simple_config`.
+
+At this time, Simple does not attempt to maintain backwards compatability
+between updates.
 
 ### Thanks
 
