@@ -8,7 +8,7 @@ include_once('simple_config.features.inc');
 function simple_config_menu() {
   $items = array();
   $items['home'] = array(
-    'page callback' => 'home_page',
+    'page callback' => 'simple_front_page',
     'access arguments' => array('access content'),
     'type' => MENU_NORMAL_ITEM,
   );
@@ -17,8 +17,10 @@ function simple_config_menu() {
 }
 
 /**
- * Homepage callback.
+ * Front page callback.
  */
-function home_page() {
-  return t('Welcome to Simple.');
+function simple_front_page() {
+  $context = context_load('front_page');
+  context_set('context', 'front_page', $context);
+  return '';
 }
