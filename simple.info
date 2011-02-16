@@ -3,6 +3,7 @@ core = 7.x
 description = A simple install profile, based on Build Kit
 
 ; Core
+dependencies[] = block
 dependencies[] = book
 dependencies[] = contact
 dependencies[] = dblog
