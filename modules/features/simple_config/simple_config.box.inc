@@ -15,8 +15,8 @@ function simple_config_default_box() {
   $box->description = 'Welcome box';
   $box->options = array(
     'body' => array(
-      'value' => 'Simple is an example Drupal 7 distribution created to be forked and built upon.',
-      'format' => 'plain_text',
+      'value' => 'Simple is an example Drupal 7 distribution. [Fork this project on GitHub](https://github.com/sprice/simple).',
+      'format' => 'markdown',
     ),
   );
   $export['welcome'] = $box;
