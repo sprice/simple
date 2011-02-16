@@ -24,6 +24,7 @@ dependencies[] = ctools
 dependencies[] = devel
 dependencies[] = diff
 dependencies[] = features
+dependencies[] = markdown
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_ui

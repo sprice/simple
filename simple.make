@@ -24,6 +24,13 @@ projects[rubik][patch][999582] = http://drupal.org/files/issues/999582-1_notices
 projects[boxes][subdir] = contrib
 projects[boxes][version] = 1.0-beta2
 
+projects[markdown][subdir] = contrib
+projects[markdown][version] = 1.0-beta1
+
+;Creates invalid HTML with preformatted blocks.
+; http://drupal.org/node/684554
+projects[markdown][patch][684554] = http://drupal.org/files/issues/markdown-684554.patch
+
 ;--------------------
 ; Development
 ;--------------------
