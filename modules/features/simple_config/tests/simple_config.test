@@ -5,8 +5,8 @@ class SimpleConfigTest extends DrupalWebTestCase {
 
   function getInfo() {
     return array(
-      'name' => t('Simple: example'),
-      'description' => t('Example test.'),
+      'name' => t('Simple: base settings'),
+      'description' => t('Test custom base settings.'),
       'group' => t('Simple'),
     );
   }
@@ -17,6 +17,8 @@ class SimpleConfigTest extends DrupalWebTestCase {
   
   function test() {
     $this->drupalGet('home');
-    $this->assertText('Welcome to Simple.');
+    $this->assertText('Welcome to Simple');
+    $this->drupalGet('');
+    $this->assertText('Welcome to Simple');
   }
 }
