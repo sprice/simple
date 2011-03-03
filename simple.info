@@ -15,6 +15,7 @@ dependencies[] = taxonomy
 
 ; Contrib
 dependencies[] = admin
+dependencies[] = boxes
 dependencies[] = openid
 dependencies[] = openidadmin
 dependencies[] = coder
