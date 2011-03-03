@@ -1,6 +1,6 @@
 name = Simple
 core = 7.x
-description = A simple install profile, based on Build Kit
+description = A simple distro. Based on Build Kit.
 
 ; Core
 dependencies[] = block
