@@ -7,3 +7,4 @@ includes[] = http://drupalcode.org/project/buildkit.git/blob_plain/refs/tags/7.x
 projects[simple][type] = profile
 projects[simple][download][type] = git
 projects[simple][download][url] = git://github.com/sprice/simple.git
+projects[simple][download][branch] = mapping
