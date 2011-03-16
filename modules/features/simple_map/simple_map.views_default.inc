@@ -73,12 +73,6 @@ function simple_map_views_default_views() {
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Argument: Taxonomy: Term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['style_plugin'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
   /* Filter: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -99,15 +93,15 @@ function simple_map_views_default_views() {
   $handler->display->display_options['style_options']['grouping'] = 'name';
   $handler->display->display_options['style_options']['data_source'] = array(
     'value' => 'wkt',
-    'other_lat' => 'name',
-    'other_lon' => 'name',
+    'other_lat' => 'entity_id',
+    'other_lon' => 'entity_id',
     'wkt' => 'entity_id',
     'other_top' => 'name',
     'other_right' => 'name',
     'other_bottom' => 'name',
     'other_left' => 'name',
-    'name_field' => '',
-    'description_field' => '',
+    'name_field' => 'name',
+    'description_field' => 'entity_id',
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -155,8 +149,14 @@ function simple_map_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['tid']['style_plugin'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
+  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
+  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
 
   /* Display: Detail map block */
   $handler = $view->new_display('block', 'Detail map block', 'block_1');
@@ -164,7 +164,7 @@ function simple_map_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'openlayers_map';
-  $handler->display->display_options['style_options']['preset'] = 'blog_map';
+  $handler->display->display_options['style_options']['preset'] = 'blog_posts';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
@@ -175,6 +175,7 @@ function simple_map_views_default_views() {
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['title'] = '%1';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'op_tid_by_nid';
   $handler->display->display_options['arguments']['tid']['validate_type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
@@ -199,10 +200,11 @@ function simple_map_views_default_views() {
     t('- All -'),
     t('Offset'),
     t('location_term'),
-    t('All'),
     t('Detail map data'),
     t('field_location'),
+    t('All'),
     t('Detail map block'),
+    t('%1'),
   );
 
   $views[$view->name] = $view;

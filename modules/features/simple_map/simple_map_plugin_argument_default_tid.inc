@@ -10,6 +10,7 @@ class simple_map_plugin_argument_default_tid extends views_plugin_argument_defau
     sscanf($_GET['q'], 'node/%d', $nid);
     if (isset($nid) && is_numeric($nid) && $node = node_load($nid)) {
       if (isset($node->field_geoterm['und'][0]['tid'])) {
+        error_log($node->field_geoterm['und'][0]['tid']);
         return $node->field_geoterm['und'][0]['tid'];
       }
     }
