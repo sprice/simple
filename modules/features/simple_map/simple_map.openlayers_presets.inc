@@ -14,14 +14,14 @@ function simple_map_openlayers_presets() {
   $openlayers_presets->description = 'A blog post preset';
   $openlayers_presets->data = array(
     'width' => 'auto',
-    'height' => '400px',
+    'height' => '250px',
     'image_path' => 'http://js.mapbox.com/theme/dark/',
     'css_path' => '',
     'proxy_host' => '',
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '-50.176557339697, 25.277070172716',
+        'centerpoint' => '-50.176557339697, 45.277070172716',
         'zoom' => '2',
       ),
       'restrict' => array(
@@ -30,11 +30,12 @@ function simple_map_openlayers_presets() {
       ),
     ),
     'behaviors' => array(
+      'openlayers_behavior_zoomtolayer' => array(
+        'zoomtolayer' => 'blog_geo_openlayers_1',
+        'point_zoom_level' => '3',
+      ),
       'openlayers_behavior_attribution' => array(),
       'openlayers_behavior_keyboarddefaults' => array(),
-      'openlayers_behavior_layerswitcher' => array(
-        'ascending' => 1,
-      ),
       'openlayers_behavior_navigation' => array(
         'zoomWheelEnabled' => 1,
       ),
