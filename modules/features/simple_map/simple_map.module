@@ -1,0 +1,3 @@
+<?php
+
+include_once('simple_map.features.inc');
