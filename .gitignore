@@ -1,5 +1,6 @@
 libraries
 modules/contrib
 modules/development
+modules/custom
 themes/contrib
 test.sh
