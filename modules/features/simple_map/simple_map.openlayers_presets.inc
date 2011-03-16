@@ -13,16 +13,16 @@ function simple_map_openlayers_presets() {
   $openlayers_presets->title = 'Blogposts';
   $openlayers_presets->description = 'Blog terms on a map';
   $openlayers_presets->data = array(
-    'width' => '600px',
-    'height' => '400px',
-    'image_path' => '',
+    'width' => 'auto',
+    'height' => '200px',
+    'image_path' => 'http://js.mapbox.com/theme/dark/',
     'css_path' => '',
     'proxy_host' => '',
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
         'centerpoint' => '0, 0',
-        'zoom' => '1',
+        'zoom' => '3',
       ),
       'restrict' => array(
         'restrictextent' => 0,
