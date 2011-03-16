@@ -33,3 +33,12 @@ dependencies[] = views_ui
 ; Custom
 
 dependencies[] = simple_config
+dependencies[] = simple_map
+
+; Mapping
+
+dependencies[] = geofield
+dependencies[] = openlayers
+dependencies[] = openlayers_ui
+dependencies[] = openlayers_plus
+dependencies[] = mapbox

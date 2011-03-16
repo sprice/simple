@@ -37,3 +37,34 @@ projects[markdown][patch][684554] = http://drupal.org/files/issues/markdown-6845
 
 projects[coder][subdir] = contrib
 projects[coder][version] = 1.0-beta6
+
+;--------------------
+; Mapping
+;--------------------
+
+projects[libraries][subdir] = contrib
+projects[libraries][version] = 1.0
+
+projects[geofield][subdir] = custom
+projects[geofield][location] = "http://featureserver.phase2technology.com/fserver
+projects[geofield][version] = 1.0-alpha1
+
+projects[mapbox][subdir] = contrib
+projects[mapbox][version] = 2.0-alpha0
+
+projects[openlayers][subdir] = contrib
+projects[openlayers][version] = 2.0-alpha1
+
+projects[openlayers_plus][subdir] = contrib
+projects[openlayers_plus][type] = module
+projects[openlayers_plus][download][type] = git
+projects[openlayers_plus][download][url] = git://github.com/phase2/openlayers_plus.git
+projects[openlayers_plus][download][tag] = drupal-7--1-0-alpha2
+
+;--------------------
+; Mapping Libraries
+;--------------------
+
+libraries[openlayers_slim][download][type] = "git"
+libraries[openlayers_slim][download][url] = git://github.com/developmentseed/openlayers_slim.git
+libraries[openlayers_slim][directory_name] = openlayers_slim
