@@ -16,6 +16,13 @@ projects[rubik][subdir] = contrib
 ; http://drupal.org/node/999582
 projects[rubik][patch][999582] = http://drupal.org/files/issues/999582-1_notices.patch
 
+;--------------------
+; Build Kit Overrides
+;--------------------
+
+; "Related terms" definition is missing "base field"
+; http://drupal.org/node/1021942
+projects[views][patch[1021942] = http://drupal.org/files/issues/views_relatedterms.patch
 
 ;--------------------
 ; Additional Contrib
