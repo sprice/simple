@@ -8,6 +8,10 @@ includes[] = http://drupalcode.org/project/buildkit.git/blob_plain/refs/tags/7.x
 ; Build Kit overrides
 ;--------------------
 
+; "Related terms" definition is missing "base field"
+; http://drupal.org/node/1021942
+projects[views][patch][1021942] = http://drupal.org/files/issues/views_relatedterms.patch
+
 projects[tao][subdir] = contrib
 
 projects[rubik][subdir] = contrib
@@ -15,14 +19,6 @@ projects[rubik][subdir] = contrib
 ; Notices on admin/index
 ; http://drupal.org/node/999582
 projects[rubik][patch][999582] = http://drupal.org/files/issues/999582-1_notices.patch
-
-;--------------------
-; Build Kit Overrides
-;--------------------
-
-; "Related terms" definition is missing "base field"
-; http://drupal.org/node/1021942
-projects[views][patch[1021942] = http://drupal.org/files/issues/views_relatedterms.patch
 
 ;--------------------
 ; Additional Contrib
@@ -53,7 +49,7 @@ projects[libraries][subdir] = contrib
 projects[libraries][version] = 1.0
 
 projects[geofield][subdir] = custom
-projects[geofield][location] = "http://featureserver.phase2technology.com/fserver
+projects[geofield][location] = http://featureserver.phase2technology.com/fserver
 projects[geofield][version] = 1.0-alpha1
 
 projects[mapbox][subdir] = contrib
