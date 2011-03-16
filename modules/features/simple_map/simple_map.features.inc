@@ -5,7 +5,10 @@
  */
 function simple_map_ctools_plugin_api() {
   list($module, $api) = func_get_args();
-  if ($module == "openlayers" && $api == "openlayers_layers") {
+  if ($module == "context" && $api == "context") {
+    return array("version" => 3);
+  }
+  elseif ($module == "openlayers" && $api == "openlayers_layers") {
     return array("version" => 1);
   }
   elseif ($module == "openlayers" && $api == "openlayers_presets") {
