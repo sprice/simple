@@ -4,8 +4,7 @@
 
 Copy the `simple_distro.make` file to your system and run with `drush make` [1][2]
 
-    $ curl -O https://github.com/sprice/simple/raw/master/simple_distro.make
-    $ drush make --working-copy simple_distro.make public_html
+    $ drush make --working-copy "https://github.com/sprice/simple/raw/master/simple_distro.make" public_html
 
 ### Notes
 
