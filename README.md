@@ -2,7 +2,7 @@
 
 ### Build
 
-Copy the `simple_distro.make` file to your system and run with `drush make` [1][2]
+Install `drush`[1] and `drush make`[2] on your system and run the following command:
 
     $ drush make --working-copy "https://github.com/sprice/simple/raw/master/simple_distro.make" public_html
 
