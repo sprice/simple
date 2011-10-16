@@ -12,7 +12,6 @@ projects[tao][subdir] = contrib
 
 projects[rubik][subdir] = contrib
 
-
 ;--------------------
 ; Additional Contrib
 ;--------------------
@@ -26,6 +25,15 @@ projects[markdown][version] = 1.0
 ; Creates invalid HTML with preformatted blocks.
 ; http://drupal.org/node/684554
 projects[markdown][patch][684554] = http://drupal.org/files/issues/markdown-684554.patch
+
+;--------------------
+; Custom
+;--------------------
+
+projects[simple_blog][type] = module
+projects[simple_blog][subdir] = contrib
+projects[simple_blog][download][type] = git
+projects[simple_blog][download][url] = http://github.com/sprice/simple_blog.git
 
 ;--------------------
 ; Development

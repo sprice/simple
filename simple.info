@@ -33,3 +33,4 @@ dependencies[] = views_ui
 ; Custom
 
 dependencies[] = simple_config
+dependencies[] = simple_blog
