@@ -14,7 +14,7 @@ class SimpleConfigTest extends DrupalWebTestCase {
   function setUp() {
     parent::setUp('simple_config');
   }
-  
+
   function test() {
     $this->drupalGet('home');
     $this->assertText('Welcome to Simple');
