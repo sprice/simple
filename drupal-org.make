@@ -18,7 +18,7 @@ projects[rubik][subdir] = contrib
 ;--------------------
 
 projects[boxes][subdir] = contrib
-projects[boxes][version] = 1.0-beta6
+projects[boxes][version] = 1.0
 
 projects[markdown][subdir] = contrib
 projects[markdown][version] = 1.0
