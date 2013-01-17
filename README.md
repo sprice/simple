@@ -4,13 +4,7 @@
 
 Ensure `drush`[1] is installed on your system.
 
-    git clone http://github.com/sprice/simple
-    mkdir profiles
-    mv simple profiles/
-    mkdir public_html
-    mv profiles public_html/
-    cd public_html
-    drush make --prepare-install --contrib-destination=profiles/simple profiles/simple/build-simple.make --yes
+    drush make https://raw.github.com/sprice/simple/master/build-simple.make public_html
 
 ### Notes
 
